@@ -18,9 +18,9 @@ function App() {
       <h1> Welcome to the spiderverse, view the spidey list</h1>
       <button onClick={showList}>click me and show the button</button>
       <ul>
-        {listItems.map((item) => {
-          <li>{item.name}</li>;
-        })}
+        {listItems.map((item) => (
+          <li>{item.name}</li>
+        ))}
       </ul>
     </div>
   );
