@@ -3,7 +3,7 @@ General overview: [link to curriculum overview file](https://docs.google.com/doc
 # Detailed Curriculum:
 ## Phase 1:
 Core Concepts:
-### Session 1:
+### Session 1 & 2:
 [lesson slide](https://docs.google.com/presentation/d/1Vb-uubMEusjhm_preCM-GxKTmjmu6HTw/edit?usp=drive_link&ouid=102590511928781219079&rtpof=true&sd=true)
     - Course intro
     - Pre-requisite
