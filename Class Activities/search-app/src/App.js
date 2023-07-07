@@ -1,10 +1,30 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+
+const listItems = [
+  { name: 'spider-boy' },
+  { name: 'spider-man' },
+  { name: 'spider-punk' },
+  { name: 'spider-girl' }
+];
+
+const showList = () => {
+  console.log(listItems)
+}
 
 function App() {
   return (
     <div className="App">
-       Welcome to the spiderverse, search and find your favourite spiderman name!
+      <h1>
+        Welcome to the spiderverse, search and find your favourite spiderman
+        name!
+      </h1>
+      <button onClick={showList}>Click me and check console</button>
+      <ul>
+        {listItems.map((item) => (
+          <li>{item.name}</li>
+        ))}
+      </ul>
     </div>
   );
 }
