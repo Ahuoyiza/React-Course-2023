@@ -1,0 +1,69 @@
+Session 1 extra practice project info:
+Simple Registration Form using React
+
+In this activity, you will be building a simple registration form using React.
+The form should collect basic information from the user, such as their name, email address, and phone number. 
+This project will help you practice working with form elements, handling user input, and managing state in React.
+Before you begin:
+1. create a repo named: "React Practice Projects"
+2. create a directory named "simple-reg-form"
+3. clone this repo locally or use codespaces.
+
+
+Follow the instructions below to complete the assignment:
+
+1. Set up a new React project:
+In your "simple-reg-form" directory:
+Create a new React project using create-react-app.
+```
+npx create-react-app .
+```
+Set up the necessary project structure and dependencies.
+Afterwards, create a new branch: "dev" 
+2.Create the RegistrationForm component:
+
+Create a new component called RegistrationForm.
+Design and structure the form using appropriate form elements (e.g., input fields, labels, buttons).
+Include fields for the following information:
+Name (First Name and Last Name)
+Email Address
+Phone Number
+
+3. Implement form validation:
+
+Validate the form inputs to ensure that they are not empty and meet any additional requirements you define.
+Display appropriate error messages if the user enters invalid or incomplete information.
+Manage form state:
+
+4. Use React's state management to handle the form state.
+Store the user's input values in state variables.
+Update the state when the user enters information into the form fields.
+
+5. Handle form submission:
+
+Add a submit button to the form.
+Implement a form submission handler that will be triggered when the user submits the form.
+Display a success message or take appropriate action when the form is successfully submitted.
+
+6. Style the form:
+
+Apply CSS styles to make the registration form visually appealing.
+Use CSS frameworks or custom styles to enhance the form's design.
+
+7. Test and debug:
+
+Test the form by entering different inputs and validating the behavior.
+Debug any issues or errors that you encounter during testing.
+
+8. Optional: Add additional features or enhancements:
+
+Add more form fields (e.g., address, date of birth) or optional fields.
+Implement additional validation rules (e.g., email format validation).
+Incorporate form validation using external libraries or custom validation functions.
+
+Submission:
+
+1. Add me as a collaborator in your "React Practice Projects" repository (use: Ahuoyiza or sophieoyiza@gmail.com)
+2. Make a pull request from your dev branch and assign me to review.
+
+Good luck, and happy coding!
