@@ -15,9 +15,11 @@ const List = [
   },
 ];
 
+let value = 0;
+
 function App() {
-  function listFunction(List) {
-List.map(list)
+  function listFunction() {
+    console.log("display list");
   }
   return (
     <div className="App">
@@ -25,7 +27,11 @@ List.map(list)
         Welcome to the spiderverse, search and find your favourite spiderman
         name!
       </h1>
-      <button onClick={listFunction}>List</button>
+      <button onClick={listFunction}>show</button>
+      {List.map((list) => {
+        let num= value + 1;
+        return <li key={num}>{list.name}</li>;
+      })}
     </div>
   );
 }
