@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+
