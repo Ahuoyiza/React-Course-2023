@@ -9,14 +9,13 @@ header {
   justify-content: space-between;
 }
 
-nav{
+nav {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 
 a {
   text-decoration: none;
   display: block;
+  margin-right: 10px;
 }
-
-
