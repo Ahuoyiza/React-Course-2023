@@ -1,37 +1,51 @@
 import "./App.css";
+import Layout from "./Layout";
+import { useState } from "react";
 
-const List = [
-  {
-    name: "spider-man",
-  },
-  {
-    name: "spider-girl",
-  },
-  {
-    name: "spider-hulk",
-  },
-  {
-    name: "spider-boy",
-  },
+const spiderPeople = [
+  "Miles Morales",
+  "Peter B. Parker",
+  "Gwen Stacy",
+  "Peni Parker",
+  "Spider-Man",
+  "Spider-Man Noir",
+  "Spider-Man 2099 (Miguel o' Hara)",
+  "Spider-Park (Hobie Brown)",
+  "Spider-Man (Aron Davis)",
+  "Spider-Girl (Anya Corazon)",
 ];
 
-let value = 0;
-
 function App() {
-  function listFunction() {
-    console.log("display list");
+  const [searchItem, setSearchIterm] = useState("");
+  const [filteredItem, setFilteredItem] = useState([]);
+
+  function valueChange(e) {
+    setSearchIterm((search) => {
+      return e.target.value;
+    });
+    let content = spiderPeople.filter((spider) => {
+      return spider.includes(searchItem);
+    });
+    setFilteredItem(() => {
+      return content;
+    });
   }
   return (
     <div className="App">
-      <h1>
-        Welcome to the spiderverse, search and find your favourite spiderman
-        name!
-      </h1>
-      <button onClick={listFunction}>show</button>
-      {List.map((list) => {
-        let num= value + 1;
-        return <li key={num}>{list.name}</li>;
-      })}
+      <Layout title="Spider Spiderman Spiderman" />
+      <h1>Welcome to the Spiderverse</h1>
+      <form>
+        <input
+          placeholder="Search for an item"
+          value={searchItem}
+          onChange={valueChange}
+        />
+      </form>
+      <ul>
+        {filteredItem.map((item)=>{
+          return <li>{item}</li>
+        })}
+      </ul>
     </div>
   );
 }
