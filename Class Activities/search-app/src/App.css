@@ -1,4 +1,18 @@
 .App {
-  text-align: center;
+  width: 70vw;
+  margin: auto;
 }
-
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  /* justify-content: space-around; */
+}
+a {
+  text-decoration: none;
+  display: block;
+  margin-right: 10px;
+}
