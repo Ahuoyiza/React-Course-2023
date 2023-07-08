@@ -1,0 +1,69 @@
+Project 1: Building a Simple Quiz App using React
+
+Objective:
+Build a simple quiz app using React to test users' knowledge of a specific topic.
+
+Features:
+1. Quiz Questions:
+   - Create an array of quiz questions containing a question text and multiple answer options.
+   - The questions should cover the chosen topic and be stored in a data structure within the app.
+
+2. Displaying Questions:
+   - Render the current question text and answer options on the screen.
+   - Use React state to keep track of the current question being displayed.
+
+3. Answer Selection:
+   - Allow users to select one answer from the provided options.
+   - Use React state to track the user's selected answer.
+
+4. Navigation:
+   - Provide a mechanism to move to the next question after selecting an answer.
+   - Update the current question in the app state accordingly.
+   - Display a message if the user tries to proceed without selecting an answer.
+
+5. Score Calculation:
+   - Keep track of the user's score as they progress through the quiz.
+   - Assign points for each correct answer and update the score accordingly.
+
+6. Quiz Completion:
+   - Determine when the quiz is complete, after a fixed number of questions or when the question array ends.
+   - Display the final score to the user upon completion.
+
+UI Requirements:
+1. Home Screen:
+   - Display a welcome message or title for the quiz app.
+   - Provide a button or link to start the quiz.
+
+2. Question Screen:
+   - Display the current question number and total number of questions.
+   - Show the question text and the answer options in a readable format (e.g., a list or radio buttons).
+   - Highlight the selected answer by changing the style or adding a checkmark.
+
+3. Navigation Elements:
+   - Show navigation buttons to move between questions (e.g., "Next" or "Submit" buttons).
+   - Disable the navigation buttons if the user hasn't selected an answer or reached the quiz's end.
+
+4. Score Display:
+   - After completing the quiz, display the user's final score along with a congratulatory message.
+
+5. Styling:
+   - Apply suitable CSS styles to enhance the visual appeal and usability of the quiz app.
+   - Ensure that the app is responsive and works well on different screen sizes.
+
+Additional Suggestions:
+  - Opt for simple clean UI designs.
+  - Update your project readme file to contain relevant info about the project and sample screenshots where necessary.
+
+Submission:
+  - Create a repository for the project (ensure you follow git conventions).
+  - Add me as a collaborator (Ahuoyiza or sophieoyiza@gmail.com).
+  - Integrate vercel(https://vercel.com/) for deployment.
+  - Once done, make a pr from your dev branch and assign me as the reviewer.
+  - Publish/make a post about the project on LinkedIn & Twitter.
+  - Submit your project using the link below or before 4:00 pm (GMT+1)Friday, July 14, 2023:
+  https://forms.gle/GYiYBQpRfeM6ateTA
+
+  
+
+Remember, the features list is meant to provide an overview of the expected features and UI requirements.
+Feel free to be creative and add extra features to make your quiz app more engaging. Good luck, and have fun building your quiz app!
