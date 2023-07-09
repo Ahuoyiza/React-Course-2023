@@ -23,9 +23,9 @@ function App() {
     const searchTerm = e.target.value;
     setSearchTerm(searchTerm);
 
-    const filteredItems = spiderPeople.filter((item) => {
-      item.toLowerCase().includes(setSearchTerm.toLowerCase());
-    });
+    const filteredItems = spiderPeople.filter((item) =>
+      item.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     setFilteredItems(filteredItems);
   };
@@ -38,15 +38,18 @@ function App() {
         Search and find your spider people that were in across the spiderverse
       </p>
       <div>
-        <form>
-          <input type="search" placeholder="type search here...." value={searchTerm} onChange={handleSearch}/>
-        </form>
+        <input
+          type="search"
+          placeholder="type search here...."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
       </div>
       <div>
         <ul>
-          {filteredItems.map((item,index)=>{
+          {filteredItems.map((item, index) => (
             <li key={index}>{item}</li>
-          })}
+          ))}
         </ul>
       </div>
     </div>
