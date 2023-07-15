@@ -37,6 +37,7 @@ function App() {
       <div>
         <input
           type='search'
+          class="searchBox"
           placeholder='type to search here...'
           value= {searchTerm}
           onChange={handleSearch}
