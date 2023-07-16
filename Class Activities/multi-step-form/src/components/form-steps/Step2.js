@@ -1,32 +1,12 @@
-import { Component } from "react";
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link, Outlet } from "react-router-dom";
 
-class Step2 extends Component{
-    render(){
-        const {formData, handleChange} = this.props;
-        
-        return(
-            <>
-             <h1>Step 2</h1>
-             <label>
-                Email:
-                <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                />
-             </label>
-             <label>
-                Password:
-                <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                />
-             </label>
-            </>
-        )
-    }
+const Step2= ()=> {
+  return (
+    <div className="step2">
+      <h1>multi step form</h1>
+    </div>
+  );
 }
+
 export default Step2;

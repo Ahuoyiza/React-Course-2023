@@ -1,12 +1,12 @@
-import { Component } from "react";
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link, Outlet } from "react-router-dom";
 
-class SuccessPage extends Component{
-    render(){
-        return(
-            <>
-             <h1>You have been successfully Registered</h1>
-            </>
-        )
-    }
+const Success= ()=> {
+  return (
+    <div className="success">
+      <h1>multi step form</h1>
+    </div>
+  );
 }
-export default SuccessPage;
+
+export default Success;
