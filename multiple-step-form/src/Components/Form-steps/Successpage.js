@@ -1,14 +1,14 @@
 import { Component } from "react";
 
 
-class RegistrationPage extends Component{
+class SuccessPage extends Component{
     render(){
         return(
             <>
-            
+            <h1>Successfully registered</h1>
             
             </>
         )
     }
 }
-export default RegistrationPage;
+export default SuccessPage
