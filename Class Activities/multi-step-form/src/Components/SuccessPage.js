@@ -9,3 +9,5 @@ class SuccessPage extends Component {
     );
   }
 }
+
+export default SuccessPage;
