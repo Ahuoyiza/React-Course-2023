@@ -53,8 +53,12 @@ class App extends Component {
         <Link to="/register">Click here to register for the</Link>
         <Routes>
           <Route exact path="/register" component={Step1} />
+          <Route path="/step2" component={Step2} />
+          <Route path="/step3" component={Step3} />
           <Route path="/success" component={SuccessPage} />
         </Routes>
+        {step === 1 && <button onClick={this.prevStep}>Previous</button>}
+        {step === 4 && <button onClick={this.nextStep}>Next</button>}
       </Router>
     );
   }
