@@ -11,6 +11,7 @@ const step1=({})=>{
     return(
         <>
             <h1>step1: Bio data</h1>
+
         </>
     )
     
