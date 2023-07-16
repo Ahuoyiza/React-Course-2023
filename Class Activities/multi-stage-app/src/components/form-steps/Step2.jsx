@@ -7,12 +7,12 @@ import {
   Outlet,
 } from "react-router-dom";
 
-const App = () => {
+const Step2 = () => {
   return (
-    <div className="App">
-      <h1>Multi-step form</h1>
-    </div>
+    <>
+      <h1>You have been registered successfully!</h1>
+    </>
   );
 };
 
-export default App;
+export default Step2;

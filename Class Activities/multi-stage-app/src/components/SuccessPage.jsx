@@ -1,13 +1,18 @@
-import { Component } from "react";
+import { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Outlet,
+} from "react-router-dom";
 
-class SuccessPage extends Component {
-  render() {
-    return (
-      <>
-        <h1>You have been registered successfully!</h1>
-      </>
-    );
-  }
-}
+const SuccessPage = () => {
+  return (
+    <>
+      <h1>You have been registered successfully!</h1>
+    </>
+  );
+};
 
 export default SuccessPage;
