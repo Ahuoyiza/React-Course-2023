@@ -6,7 +6,42 @@ import RegistrationForm from './components/RegistrationForm';
 
 
 class App extends Component {
-  render(){
+  state = {
+    step: 1,
+    formData: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      address: '',
+      city: '',
+      country: '',
+    }
+  }
+
+  handleChange = (e)=>{
+    const { name, value } = e.target;
+    this.setState(
+      ( prevState)  =>({
+        formData: {
+          ...prevState.formData,
+          [name]: value,
+        }
+      })
+    );
+    nextStep = () => {
+      this.setState(
+        (prevState) => (
+          {
+            step: prevState.step + 1
+          }
+        )
+      )
+    }
+  }
+
+  render() {
+    const { step, formData } = this.state;
     return(
       <Router>
         <h1>Welcome to Femcode Africa</h1>
@@ -14,7 +49,9 @@ class App extends Component {
         <Link to = "/register">Click here to Register</Link>
         <Routes>
           <Route exact path = "/register" Component={RegistrationForm} />
-          <Route path= "/success" Component = {SuccessPage} />
+          <Route path="/success" Component={SuccessPage} />
+          
+
         </Routes>
           
       </Router>
