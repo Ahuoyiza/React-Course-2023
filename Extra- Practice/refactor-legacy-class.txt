@@ -1,0 +1,13 @@
+Refactor the code in this repository to use functional components and hooks:
+https://github.com/bradtraversy/react_step_form/tree/master/src/components
+
+note:
+1. clone the repository
+2. make your changes and push to your github
+3. Your readme file should indicate that this is a refactor and include link and credit to the original code.
+
+submission:
+1. add me as a collaborator (ahuoyiza)
+2. make a pr and assign me to it.
+
+All the best!
