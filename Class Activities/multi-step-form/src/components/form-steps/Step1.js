@@ -1,15 +1,21 @@
-import { Component } from "react";
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Route, Link, Outlet } from "react-router-dom";
 
-class Step1 extends Component{
-    render() {
-        const { ForData, handleChange } = this.props;
-        return(
-            <>
-                <h1>Welcome to Femcode Africa</h1>
-                <p>React Bootcamp to start tomorrow</p>
-            </>
-        )
-    }
+const step1 = ({ }) => {
+    const [firstName, setFirstName] = useState('');
+    const [lasttName, setlastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [course, setCourse] = useState('');
+    const [errors, setError] = useState('');
+    return (
+        <>
+            <h1>Step1: Bio Data</h1>
+        </>
+    )
 }
+
+
+
 
 export default step1;
