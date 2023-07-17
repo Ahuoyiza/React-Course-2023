@@ -10,17 +10,40 @@ import {
   } from '@chakra-ui/react'
 import { BrowserRouter as Router, Routes, Route, Link, Outlet } from "react-router-dom";
 
-const Step1 = ({} )=>{
+const Step1 = ( {onNext})=>{
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [course, setCourse] = useState('');
     const [errors, setErrors] = useState({});
+
+    const handleNext = () => {
+        const errors = {}
+        if (!firstName){
+            errors.firstName = 'First Name is required';
+        };
+        if (!lastName){
+            errors.lastName = 'Last Name is required';
+        };
+        if (!password){
+            errors.password = 'Password is required';
+        };
+        if (!email){
+            errors.firstName = 'email is required';
+        }else if(!/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
+            errors.email = 'Email is invalid'
+        };
+        if (Object.keys(errors).length === 0){
+            onNext({firstName,lastName,email,password,course})
+        }
+    }
+
+
     return (
-        <>
+        <div>
         <h1>Step 1: Bio Data</h1>
-        <FormControl isRequired>
+        <FormControl >
             <FormLabel> Firstname: </FormLabel>
             <Input 
                 type="text"
@@ -35,14 +58,14 @@ const Step1 = ({} )=>{
                 value = {lastName}
                 onChange={(e) => setLastName(e.target.value)}
             />
-            <FormLabel> Firstname: </FormLabel>
+            <FormLabel> Email: </FormLabel>
             <Input 
                 type="email"
                 placeholder="your email address"
                 value = {email}
                 onChange={(e) => setEmail(e.target.value)}
             />
-            <FormLabel> Firstname: </FormLabel>
+            <FormLabel> Password: </FormLabel>
             <Input 
                 type="password"
                 placeholder="Enter password"
@@ -50,14 +73,14 @@ const Step1 = ({} )=>{
                 onChange={(e) => setPassword(e.target.value)}
             />
         </FormControl>
-        <Select value={course} onChange={(e) =>setCourse(e.target.value)}>
-            <FormLabel>Choose your preferred course</FormLabel>
+        <FormLabel>Choose your preferred course</FormLabel>
+        <Select value={course} onChange={(e) => setCourse(e.target.value)}>
             <option value="React">React</option>
-            <option value="Vue">React</option>
-            <option value="Angular">React</option>
+            <option value="Vue">Vue</option>
+            <option value="Angular">Angular</option>
         </Select>
-        <Button>Next</Button>
-        </>
+        <Button onClick={handleNext}>Next</Button>
+        </div>
     )
 }
 export default Step1;
