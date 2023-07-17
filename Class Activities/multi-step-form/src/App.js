@@ -1,34 +1,16 @@
-import './App.css';
-import {Component} from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
-import SuccessPage from './components/SuccessPage';
-import RegistrationForm from './components/RegistrationForm';
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link, Outlet } from "react-router-dom";
+import Step1 from './components/form-steps/Step1';
 
-
-class App extends Component {
-  render(){
-    return(
-      <Router>
-        <h1>Welcome to Femcode Africa</h1>
-        <p>React Bootcamp to start tomorrow</p>
-        <Link to = "/register">Click here to Register</Link>
-        <Routes>
-          <Route exact path = "/register" Component={RegistrationForm} />
-          <Route path= "/success" Component = {SuccessPage} />
-        </Routes>
-          
-      </Router>
-    )
-  }
+const App = () => {
+  return (
+  <Router>
+        <h1>Registeration form</h1>
+      <Routes>
+        <Route exact path="/register" component= {Step1}/>
+      </Routes>
+  </Router>
+  );
 }
 
 export default App;
-// function App() {
-//   return (
-//     <div className="App">
-//       <h1>multi step form</h1>
-//     </div>
-//   );
-// }
-
-// export default App;
