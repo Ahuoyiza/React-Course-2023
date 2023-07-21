@@ -1,17 +1,15 @@
 .App {
-  width: 70%;
-  max-width: auto;
-  margin: 0 auto;
+  width: 70vw;
+  margin: auto;
 }
 header {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
 }
 nav {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 a {
   text-decoration: none;
