@@ -15,18 +15,6 @@ const spiderPeople = [
   "Spider-Girl (Anya Corazon)"
 ];
 function App() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredItems, setFilteredItems] = useState([]);
-
-  const handleSearch = (e) =>{
-    const searchTerm = e.target.value;
-    setSearchTerm(searchTerm);
-
-    const filteredItems = spiderPeople.filter((item)=>
-    item.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredItems(filteredItems);
-  };
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredItems, setfilteredItems] = useState([]);
 
