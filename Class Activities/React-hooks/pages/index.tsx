@@ -1,10 +1,15 @@
-
 import type { NextPage } from 'next'
+import {useState} from 'react'
 import Head from 'next/head'
 // import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+  // const values = useState('')
+  // const inputText = values[0];
+  // const setInputText = values[1];
+  const [inputText,setInputText] = useState('');
+  const [history, setHistory] = useState([]);
   return (
     <div className={styles.container}>
       <Head>
@@ -17,9 +22,25 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           React Hooks!
         </h1>
-        <input placeholder='enter text here'/>
+         <input 
+          type= 'text'
+          placeholder='enter text here'
+          onChange={(e) => {
+            setInputText(e.target.value);
+            setHistory([...history, e.target.value])
+          }}
+        />
+       <div>
+         {inputText}
+       </div>
+        <div>
+          <ul>
+            {history.map((item) => {
+              return <div>{item}</div>
+            })}
+          </ul>
+        </div>
       </main>
-
     </div>
   )
 }
