@@ -1,23 +1,24 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import Image from "next/image";
+"use client";
 import { useRef } from "react";
 
-const MouseOver = ({ priImage, alt, secImage }) => {
-  const ImageRef = useRef(null);
+const MouseOver = ({ priImg, secImg, alt }) => {
+  const imageRef = useRef(null);
   return (
-    <div>
-      <Image
-        src={priImage}
-        onMouseOver={() => {
-          ImageRef.current.src = secImage;
-          alt = { alt };
-        }}
-        onMouseOut={() => {
-          ImageRef.current.src = priImage;
-          alt = { alt };
-        }}
-      />
-    </div>
+    <img
+      width="300px"
+      height="300px"
+      src={priImg}
+      alt={alt}
+      onMouseOver={() => {
+        imageRef.current.src = secImg;
+      }}
+      onMouseOut={() => {
+        imageRef.current.src = priImg;
+      }}
+      ref={imageRef}
+    />
   );
 };
 

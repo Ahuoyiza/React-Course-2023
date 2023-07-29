@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import ImageMouseOver from "./ImageMouseOver";
+import ImageMouseOver from "./page";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState(" ");
@@ -28,8 +28,6 @@ export default function Home() {
           ))}
         </ul>
       </div>
-
-      <ImageMouseOver priImage={undefined} alt="barbie" secImage={undefined} />
     </main>
   );
 }
