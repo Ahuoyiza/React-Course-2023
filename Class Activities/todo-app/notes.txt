@@ -1,0 +1,6 @@
+1. middlewares (handling async functions): Redux Thunk ... compare with Redux Saga
+2. selectors
+3. immutable update patterns
+4. Update the todo app using redux thunk and redux toolkit
+- delete item from the todo
+- store the todo in history

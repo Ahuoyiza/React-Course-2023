@@ -8,3 +8,12 @@ button {
     margin: 20px 0;
     padding: 0 20px;
 }
+.delete-button{
+    margin-left: 10px;
+    background-color: rgb(158, 97, 97);
+    color: #000;
+    
+}
+ul li {
+    cursor: pointer;
+}
